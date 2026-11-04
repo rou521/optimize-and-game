@@ -1,0 +1,75 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "horizons": [
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  },
+  "rate": {
+    "slopes": {
+      "quadratic_beta_0.0": -0.4978297121520805,
+      "quadratic_beta_0.9": -0.48074859146259197,
+      "nonconvex_beta_0.0": -0.4963370031277393,
+      "nonconvex_beta_0.9": -0.4775944726196247
+    },
+    "runs": 140,
+    "max_ratio": 0.7400492633720899,
+    "bound_violations": 0,
+    "max_descent_residual": -0.00014481471407222122
+  },
+  "trajectories": {
+    "SVD, constant": {
+      "mean_final_value": 0.024714042257628285,
+      "mean_polar_error": 0.0,
+      "max_bound_ratio": 0.7141076608005643
+    },
+    "SVD, decaying": {
+      "mean_final_value": 0.0005000505964333385,
+      "mean_polar_error": 0.0,
+      "max_bound_ratio": 0.9571370701051303
+    },
+    "NS5+momentum, constant": {
+      "mean_final_value": 0.037490521929808854,
+      "mean_polar_error": 0.5468886149171805,
+      "max_bound_ratio": 0.36707845754323887
+    },
+    "NS5+momentum, decaying": {
+      "mean_final_value": 0.000344728730835574,
+      "mean_polar_error": 0.5808342001782367,
+      "max_bound_ratio": 0.5064905283336473
+    }
+  },
+  "ns_relative_error": {
+    "1": 0.8731650835385439,
+    "2": 0.7973039707821162,
+    "5": 0.5121604532554945,
+    "10": 0.20226163005030906,
+    "20": 0.2148688136711416
+  },
+  "mlp": {
+    "Muon NS5 + auxiliary AdamW": {
+      "train_loss": 0.001309500434546212,
+      "test_loss": 0.0021677106585927157
+    },
+    "AdamW": {
+      "train_loss": 0.005808423217199603,
+      "test_loss": 0.008651594113496341
+    }
+  },
+  "elapsed_seconds": 22.734942211999964
+}
