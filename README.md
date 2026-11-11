@@ -2,8 +2,10 @@
 
 中文课程研究项目。先把算法、证明和可重复实验做完整；不用损失下降曲线冒充一般收敛证明。
 
-- [LaTeX 生成的报告 PDF](report/muon_report.pdf)
-- [LaTeX 源文件](report/muon_report.tex)
+- [第二版报告 PDF：概念、证明与受控实验](report/muon_report_v2.pdf)
+- [第二版 LaTeX 源文件](report/muon_report_v2.tex)
+- [原版报告 PDF（保留）](report/muon_report.pdf)
+- [原版 LaTeX 源文件（保留）](report/muon_report.tex)
 - [Muon 算法及详细注释](muon_study/optimizers.py)
 - [实验入口](muon_study/experiments.py)
 - [运行汇总](results/summary.json)
@@ -119,3 +121,34 @@ print(problem.value_grad(w)[0])
 需要固定版本的作业链接时，可在 GitHub 文件页面按 `y`，将当前分支链接转换为带提交 SHA 的永久链接。
 
 远端作者的 `muon.py` 只作为带许可证的参考快照，实验不导入它。
+
+## 第二版报告
+
+新版沿损失、梯度、更新方向、内积与范数、动量及 SVD/NS 的关系解释概念用途，
+保留并细化全部收敛证明。图表明确区分独立预算 `T`、当前步数 `t`、
+时间平均梯度核范数、当前梯度及损失；同时列出速率实验与网络参数组的学习率。
+
+原速率实验的动量组采用更保守的理论步长，约为无动量组的 17.3%，不能据曲线高低识别动量效果。
+原轨迹同时改变 SVD/NS 与动量。新版补充 **80 组受控实验**：
+两类目标 × 五个种子 × SVD/NS5 × 无动量/动量 × 固定/衰减步长，每组 2048 步。
+每个配对问题使用相同初值、学习率日程、精度、缩放和衰减设置，比较时固定其他因素。
+这些比较控制更新步数，未测量计算成本或完整搜索超参数。
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python -m muon_study.report_v2_experiments --output results_v2
+cd report
+xelatex -interaction=nonstopmode -halt-on-error muon_report_v2.tex
+xelatex -interaction=nonstopmode -halt-on-error muon_report_v2.tex
+```
+
+- [新增实验脚本](muon_study/report_v2_experiments.py)
+- [预算与学习率对照](results_v2/01_budget_and_learning_rate.pdf)
+- [二次目标受控轨迹](results_v2/02_controlled_quadratic.pdf)
+- [非凸目标受控轨迹](results_v2/02_controlled_nonconvex.pdf)
+- [原始轨迹 CSV](results_v2/controlled_trajectories.csv) / [每次运行末步指标](results_v2/controlled_final.csv)
+- [运行汇总](results_v2/summary.json) / [编译与检查记录](results_v2/VALIDATION.md)
+
+新版结果写入 `results_v2/`，原版 TeX/PDF、`results/` 和优化器实现均保留。
+新增 CSV 的 `step=t` 表示 `W_t`；终点 `t=T` 没有下一次更新，其学习率及方向诊断字段留空。
+变步长的事后界检查的是学习率加权平均，不等同于普通时间平均。

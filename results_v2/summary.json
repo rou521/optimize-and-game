@@ -1,0 +1,180 @@
+{
+  "runs": 80,
+  "horizon": 2048,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "max_bound_ratio": 0.9571370701051303,
+  "max_descent_residual": -4.9697166065681363e-05,
+  "settings": [
+    {
+      "problem": "quadratic",
+      "schedule": "constant",
+      "method": "svd",
+      "beta": 0.0,
+      "mean_final_value": 0.024714042257628285,
+      "mean_final_gradient_fro": 0.96673553613087,
+      "mean_polar_error": 0.0,
+      "max_bound_ratio": 0.7141076608005644
+    },
+    {
+      "problem": "quadratic",
+      "schedule": "constant",
+      "method": "svd",
+      "beta": 0.9,
+      "mean_final_value": 0.024270284331470382,
+      "mean_final_gradient_fro": 0.9556368884387043,
+      "mean_polar_error": 0.0,
+      "max_bound_ratio": 0.39518101571962555
+    },
+    {
+      "problem": "quadratic",
+      "schedule": "constant",
+      "method": "ns",
+      "beta": 0.0,
+      "mean_final_value": 0.015271242142735345,
+      "mean_final_gradient_fro": 0.6756718361971791,
+      "mean_polar_error": 0.5425427370350144,
+      "max_bound_ratio": 0.6414887945924542
+    },
+    {
+      "problem": "quadratic",
+      "schedule": "constant",
+      "method": "ns",
+      "beta": 0.9,
+      "mean_final_value": 0.037490521929808854,
+      "mean_final_gradient_fro": 1.1736544019438582,
+      "mean_polar_error": 0.5468886149171805,
+      "max_bound_ratio": 0.3670784575432388
+    },
+    {
+      "problem": "quadratic",
+      "schedule": "decaying",
+      "method": "svd",
+      "beta": 0.0,
+      "mean_final_value": 0.0005000505964333385,
+      "mean_final_gradient_fro": 0.12813841251385985,
+      "mean_polar_error": 0.0,
+      "max_bound_ratio": 0.9571370701051303
+    },
+    {
+      "problem": "quadratic",
+      "schedule": "decaying",
+      "method": "svd",
+      "beta": 0.9,
+      "mean_final_value": 0.0005075175754386256,
+      "mean_final_gradient_fro": 0.1399112719600984,
+      "mean_polar_error": 0.0,
+      "max_bound_ratio": 0.5840071602118417
+    },
+    {
+      "problem": "quadratic",
+      "schedule": "decaying",
+      "method": "ns",
+      "beta": 0.0,
+      "mean_final_value": 0.00036722284644881555,
+      "mean_final_gradient_fro": 0.11269114535436889,
+      "mean_polar_error": 0.5474575646876769,
+      "max_bound_ratio": 0.7768280661837468
+    },
+    {
+      "problem": "quadratic",
+      "schedule": "decaying",
+      "method": "ns",
+      "beta": 0.9,
+      "mean_final_value": 0.000344728730835574,
+      "mean_final_gradient_fro": 0.1010952462769952,
+      "mean_polar_error": 0.5808342001782367,
+      "max_bound_ratio": 0.5064905283336473
+    },
+    {
+      "problem": "nonconvex",
+      "schedule": "constant",
+      "method": "svd",
+      "beta": 0.0,
+      "mean_final_value": 0.3397554444405542,
+      "mean_final_gradient_fro": 0.04746194621625528,
+      "mean_polar_error": 0.0,
+      "max_bound_ratio": 0.7394689005509693
+    },
+    {
+      "problem": "nonconvex",
+      "schedule": "constant",
+      "method": "svd",
+      "beta": 0.9,
+      "mean_final_value": 0.3407466855320231,
+      "mean_final_gradient_fro": 0.0616757482771952,
+      "mean_polar_error": 0.0,
+      "max_bound_ratio": 0.37824014148112794
+    },
+    {
+      "problem": "nonconvex",
+      "schedule": "constant",
+      "method": "ns",
+      "beta": 0.0,
+      "mean_final_value": 0.339609153377083,
+      "mean_final_gradient_fro": 0.0436004466691278,
+      "mean_polar_error": 0.5489470559251045,
+      "max_bound_ratio": 0.6935004365043919
+    },
+    {
+      "problem": "nonconvex",
+      "schedule": "constant",
+      "method": "ns",
+      "beta": 0.9,
+      "mean_final_value": 0.33965334885569104,
+      "mean_final_gradient_fro": 0.04365294380859584,
+      "mean_polar_error": 0.5658144436913318,
+      "max_bound_ratio": 0.3864750208817461
+    },
+    {
+      "problem": "nonconvex",
+      "schedule": "decaying",
+      "method": "svd",
+      "beta": 0.0,
+      "mean_final_value": 0.3382467121669088,
+      "mean_final_gradient_fro": 0.006582379487407605,
+      "mean_polar_error": 0.0,
+      "max_bound_ratio": 0.9497182773183828
+    },
+    {
+      "problem": "nonconvex",
+      "schedule": "decaying",
+      "method": "svd",
+      "beta": 0.9,
+      "mean_final_value": 0.33825423653776066,
+      "mean_final_gradient_fro": 0.0072699950381359055,
+      "mean_polar_error": 0.0,
+      "max_bound_ratio": 0.5802652158161078
+    },
+    {
+      "problem": "nonconvex",
+      "schedule": "decaying",
+      "method": "ns",
+      "beta": 0.0,
+      "mean_final_value": 0.33824062049719633,
+      "mean_final_gradient_fro": 0.006072419370649419,
+      "mean_polar_error": 0.5568230874713532,
+      "max_bound_ratio": 0.8140790241512418
+    },
+    {
+      "problem": "nonconvex",
+      "schedule": "decaying",
+      "method": "ns",
+      "beta": 0.9,
+      "mean_final_value": 0.33824519769616546,
+      "mean_final_gradient_fro": 0.006479595310827213,
+      "mean_polar_error": 0.6378133396120654,
+      "max_bound_ratio": 0.5266530974237218
+    }
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  }
+}
