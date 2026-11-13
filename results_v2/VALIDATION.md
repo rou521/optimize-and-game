@@ -1,6 +1,6 @@
 # 第二版编译与检查记录
 
-日期：2026-11-11（Asia/Shanghai）。基于原提交 `ae64be81b4b19647d38c36a5e7ad4012dba6cf8b`。
+数值实验记录：2026-11-11；文字精修与重新编译：2026-11-13（Asia/Shanghai）。基于原提交 `ae64be81b4b19647d38c36a5e7ad4012dba6cf8b`。
 
 ## 保留原版
 
@@ -38,18 +38,27 @@ XDG_CACHE_HOME=/tmp/muon-xdg-cache xelatex -interaction=nonstopmode -halt-on-err
 XDG_CACHE_HOME=/tmp/muon-xdg-cache xelatex -interaction=nonstopmode -halt-on-error muon_report_v2.tex
 ```
 
-两次最终编译退出码均为 0，PDF 共 17 页。
+两次最终编译退出码均为 0，PDF 共 12 页。
 最终日志无 LaTeX 警告、未定义交叉引用/引用、缺失字符、Overfull 或 Underfull 提示。
 使用 PDF 文本及边界检查确认无 `??` 引用、无页面外文本/图片块；`pdffonts` 确认字体全部嵌入。
 查看全部页面缩略图，并放大检查证明、预算与学习率图、受控图表、末步表、复现命令及参考文献。
-复现命令按仓库根目录运行与报告目录编译分成两个代码块，参考文献单独起页。
+已检查复现命令、图表说明与参考文献的排版。
+
+## 2026-11-13 学术语言精修
+
+- 将问答式标题与口语化说明改为学术表述，压缩摘要、概念解释、重复结论及操作说明。
+- 删除已由受控对照覆盖的旧轨迹图，保留预算图、两类目标的受控轨迹、NS 谱实验及网络结果；图表就近配置分析。
+- 页数由 17 页减为 12 页，字号、行距与页边距未变。
+- 与上一提交逐段比对，2 个命题、2 个引理及 5 段正式证明的 LaTeX 内容完全一致；下降引理的积分推导亦保留。
+- 本次为报告编辑，未重新运行数值实验。优化器、实验脚本、CSV、图像和汇总数据均与上一提交的校验值一致。
+- XeLaTeX 重新编译两次，检查引用、字符、溢出、页面边界与图文衔接，最终日志无警告。
 
 ## 文件 SHA-256
 
 - `report/muon_report.tex`：`a6b3d4c6b98bd95a6bb43d91f89d1fd02fbdb6bab200cd4e80c6bc5f42a162bc`
 - `report/muon_report.pdf`：`e47b0209070f005227b5ab9afd0b9850f26b690ec19e0ff37f900fb964a2af99`
-- `report/muon_report_v2.tex`：`ff73643976380e138686032fe6f620ac90866863129feb7c797916087715bf2a`
-- `report/muon_report_v2.pdf`：`79888330b02cfefcd95831794ba67228f95e81e1de5cae6575347ec840dae226`
+- `report/muon_report_v2.tex`：`ec1857ccedf8b52ab87e0093e34b0ef53fc9d79680230c355b6706ab0cd48ff6`
+- `report/muon_report_v2.pdf`：`680ad5b98b04694324281066dcbad010ee03a1e27969faeec410a5aeebc655f5`
 
 完整项目校验值见根目录 `SHA256SUMS.json`（清单不包含自身）。
 
